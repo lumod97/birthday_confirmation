@@ -13,7 +13,11 @@
   <main class="container">
     <section class="card">
       <img src="assets/foto-hijo.gif" alt="Foto animada" class="badge-float" id="badge-float">
-      <h1>Abdiel cumple 7!</h1>
+      <h1 class="title-party">
+        <span class="title-main">Abdiel cumple</span>
+        <span class="title-age">7</span>
+        <span class="title-bang">!</span>
+      </h1>
       <p class="subtitle">Confirma tu asistencia. <br/> <small class="subtitle">La vamos a pasar bien!</small></p>
     
       <form name="rsvp-cumple" method="POST" action="/gracias.html" netlify netlify-honeypot="bot-field" enctype="multipart/form-data" id="rsvp-form">
@@ -45,7 +49,7 @@
           <p class="hint">Tamaño máximo sugerido 3 MB.</p>
         </div>
         <div class="field">
-          <label for="mensaje">Mensaje opcional</label>
+          <label for="mensaje">¿Cual es tu dibujo favorito?</label>
           <textarea id="mensaje" name="mensaje" rows="3" maxlength="300"></textarea>
         </div>
         <button id="submit" type="submit">Enviar</button>
