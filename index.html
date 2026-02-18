@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmación de asistencia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <img src="assets/foto-hijo.gif" alt="Foto animada" class="badge-float" id="badge-float">
+      <h1>Abdiel cumple 7!</h1>
+      <p class="subtitle">Confirma tu asistencia. <br/> <small class="subtitle">La vamos a pasar bien!</small></p>
+    
+      <form name="rsvp-cumple" method="POST" action="/gracias.html" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" id="rsvp-form">
+        <input type="hidden" name="form-name" value="rsvp-cumple">
+        <p class="hidden">
+          <label> No completar <input name="bot-field"></label>
+        </p>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" required autocomplete="name" maxlength="80">
+        </div>
+        <div class="field">
+          <label>¿Asistirás?</label>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="asistencia" value="Sí" required>
+              <span>Por supuesto! 🎉🎈</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="asistencia" value="No" required>
+              <span>Lo siento 😥</span>
+            </label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="foto">Foto opcional</label>
+          <input id="foto" name="foto" type="file" accept="image/*">
+          <div id="preview" class="preview"></div>
+          <p class="hint">Tamaño máximo sugerido 3 MB.</p>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje opcional</label>
+          <textarea id="mensaje" name="mensaje" rows="3" maxlength="300"></textarea>
+        </div>
+        <button id="submit" type="submit">Enviar</button>
+      </form>
+      <p class="privacy">Los datos se usan solo para organizar el evento.</p>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>
